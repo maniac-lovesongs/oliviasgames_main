@@ -1,10 +1,31 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  position: absolute;
+  top: 0; 
+  width: 100vw;
+  background-image: url("./transparentBg.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0; 
+}
+body{
+  background-color: white;
+}
+.app-mini-header{
+  background-image: url("./rainbowBorder.png");
+  position: fixed;
+  top: 0; 
+  width: 100%; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,19 +34,46 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
+}
+.logo-container{
+  padding: 1em; 
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  width: 75vw; 
+  height: 40vh;
+  border-radius: 1rem;
+  margin-left: 2em; 
+  margin-right: 2em; 
+  margin-bottom: 2em;
+  box-sizing: border-box;
+  opacity: 0.9;
+  position: relative;
+}
+.logo-image{
+  background-image: url("./transparentUnicorn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%; 
+  height: 80%; 
+  box-sizing: border-box;
+}
+h1{
+  font-family: hey-eloise-watercolor, sans-serif !important;
+  font-weight: 400;
+  font-size: 3rem;
+  font-style: normal;
+  box-sizing: border-box;
+  opacity: 0.5; 
+}
+h2{
+  font-family: bree, sans-serif !important;
+  font-size: 1rem; 
+  font-weight: 200;
+  opacity: 0.5; 
 }
 
 @keyframes App-logo-spin {
