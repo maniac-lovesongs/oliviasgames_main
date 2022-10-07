@@ -1,0 +1,28 @@
+.rainbow-text {
+    animation: mymove 8s infinite linear;
+    background-image: repeating-linear-gradient(to left,
+            rgb(255, 56, 155),
+            rgb(216, 58, 211),
+            dodgerblue,
+            rgb(0, 203, 101),
+            rgba(232, 232, 0, 0.941),
+            rgb(208, 135, 0),
+            hotpink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 1000px 100px;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 800 !important;
+}
+
+@keyframes mymove {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}

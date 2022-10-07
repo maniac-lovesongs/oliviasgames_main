@@ -1,0 +1,28 @@
+import React, { useState, useRef, useEffect } from 'react';
+import "./REACT_COMPONENT.scss";
+import inlineStyles from "./inlineStyles.js";
+import helperFunctions from "./helperFunctions.js";
+
+const REACT_COMPONENT = (input) => {
+
+    const [modelListenerId, setModelListenerId] = useState(null);
+    useEffect(() => {
+        const tempId = input.model.registerListener((propsChanged) => {
+        });
+        setModelListenerId(tempId);
+
+        return function cleanup() {
+            input.model.unregisterListener(modelListenerId);
+            setModelListenerId(null);
+        }
+    }, []);
+    
+
+    return (
+        <div className="REACT_COMPONENT_LOWERCASE-container">
+        </div>
+    );
+}
+
+export default REACT_COMPONENT;
+/***************************************************************/
